@@ -1,40 +1,119 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+/*general*/
 
-body {
-    background-color: black;
-}
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    header, footer {
+        position: fixed;
+        left: 0;
+        width: 100vw;
+    }
+
+    .footer-row, .light-gray-area {
+        height: 100%;
+    }
+
+    .arrow, .microphone {
+        font-size: 16px;
+    } 
+
+    /*colors*/
+
+        body {
+            background-color: black;
+        }
+
+        button, li, .lable {
+            color: white;
+        }
+
+        button, .light-gray-area {
+            background-color: rgb(74, 74, 74);
+        }
+
+    /*colors-end*/
+
+    /*flexbox*/
+        .header-content, footer, .footer-row, .footer-column-25, .footer-column-50, ul, li, .light-gray-area, .row  {
+            display: flex;
+        }
+
+        footer, .footer-row, .footer-column-25, .footer-column-50 {
+            justify-content: center;
+        }
+
+        .header-content, .right {
+            justify-content: flex-end;
+        }
+
+        footer, .footer-column-25, .footer-column-50, .light-gray-area {
+            align-items: center;
+        }
+
+        footer, .footer-row, .footer-column-50 {
+            justify-content: center;
+        }
+
+    /*flexbox*/
+
+/*general-end*/
+
 
 /*header*/
 
-.header-content {
-    width: 100vw;
-    display: flex;
-    justify-content: flex-end;
+header {
+    top:0;  
+    z-index: 1;
 }
 
 button {
-    background-color: rgb(82, 82, 82);
-    color: white;
     padding: 5px;
     border-radius: 7px;
+    border-color: rgb(74, 74, 74);
 }
 
 .small-icon {
     font-size: 15px;
 }
 
+/*header-end*/
+
+/*main*/
+
+main {
+    margin: 80px;
+}
+
+.row {
+    justify-content: space-between;
+}
+
+.column-14 {
+    width: 14%;
+}
+
+.content {
+    position: relative;
+}
+
+.lable {
+    position: absolute;
+    background-color: rgb(74, 74, 74, 0.7);
+    bottom: 4px;
+    padding: 5px;
+}
+
+/*main-end*/
+
 /*footer*/
+
 footer {
-    height: 100px;
-    width: 100vw;
-    background-color: rgb(82, 82, 82);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 90px;
+    bottom:0;
+    background-color: rgb(34, 34, 34);
 }
 
 .footer-container {
@@ -42,43 +121,20 @@ footer {
     width: 100%;
 }
 
-.footer-row {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-}
-
 .footer-column-25 {
     width: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .footer-column-50 {
     width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .left {
     justify-content: flex-start;
 }
 
-.right {
-    justify-content: flex-end;
-}
-
-ul {
-    display: flex;
-}
-
 li {
-    display: flex;
     text-align: center;
-    color: white;
     padding-left: 15px;
 }
 
@@ -91,7 +147,6 @@ i {
 }
 
 .arrow {
-    font-size: 16px;
     padding: 20px 10px 0px 10px;
 }
 
@@ -99,14 +154,9 @@ i {
     color: rgb(26, 201, 26);
 }
 
-.light-gray-area {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    background-color: rgb(108, 108, 109);
-}
-
 .only-left-element {
-    padding: 0 20px 0 20px;
+    padding: 0 20px;
     color: red;
 }
+
+/*footer*/
